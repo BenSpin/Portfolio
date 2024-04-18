@@ -10,7 +10,7 @@
 
     <!-- Header -->
     <header id="header" class="alt">
-        <a href="index.html" class="logo"><strong>Home Page</strong> <span>Projects</span></a>
+        <a href="index.html" class="logo"><strong>Home Page</strong> </a>
         <nav>
             <a href="#menu">Menu</a>
         </nav>
@@ -38,7 +38,10 @@
         this endeavor was a foundational step toward pursuing further education.</p>
     
     <!-- Image floated to the left -->
-    <div class="image left"><img src="images/PCB_design.jpg" alt="PCB Design" /></div>
+    <figure class="image left">
+        <img src="images/PCB_design.jpg" alt="PCB Design" />
+        <figcaption>Custom PCB </figcaption>
+    </figure>
 
     <p>The sumo bot was designed from the ground up, including a custom-built PCB board and carefully sourced components. 
         The robot, powered by code written in C++ and ran on a Nucleo, featured opponent detection sensors and line detection capabilities to 
@@ -47,7 +50,10 @@
         highlighting a commitment to incorporating advanced features despite the project's DIY nature.</p>
 
     <!-- Image floated to the right -->
-    <div class="image right"><img src="images/thumbs/sumo_bot.jpg" alt="Sumo" /></div>
+    <figure class="image right">
+        <img src="images/thumbs/sumo_bot.jpg" alt="Sumo" />
+        <figcaption>Sumo Bot </figcaption>
+    </figure>
 
     <p>The robot's performance was tested in a competitive setting, where its primary objective was to remain within a designated circle while confronting opponents. 
         The project presented unique challenges as a solo team, particularly in achieving reliable performance against teams with more resources. Despite these obstacles, 
@@ -68,36 +74,123 @@
 </section>
 
 
-    <!-- Section for Multi-Drone Lifting System -->
-    <section id="multi-drone-system" class="main special">
-        <header class="major">
-            <h2>Multi-Drone Lifting System</h2>
-        </header>
-        <p>Details about the Multi-Drone Lifting System project...</p>
-        <!-- Additional content for Multi-Drone Lifting System -->
-    </section>
+<!-- Section for Multi-Drone Lifting System -->
+<section id="multi-drone-system" class="main special">
+    <header class="major">
+        <h2>Multi-Drone Lifting System</h2>
+    </header>
+    <p>Increasing the lifting capacity of drone systems substantially increases their usefulness and viability in a wide range of applications, 
+        from search and rescue to supply delivery. However, the cost and size of more powerful drones can grow exponentially, potentially making 
+        them prohibitively expensive in some applications. We hypothesized that this price could be offset by allowing multiple smaller drones to work in tandem. 
+        This project aimed to design and develop a truss and control scheme that enabled multiple smaller drones to work collaboratively, 
+        thereby increasing the total lifting capacity of a drone system.</p>
+    
+    <!-- Image floated to the left -->
+    <figure class="image left">
+        <img src="images/drone_w_truss.jpg" alt="Drone Configuration" />
+        <figcaption>Drone Configuration </figcaption>
+    </figure>
+    
 
-    <!-- Section for Global Localization for Indoor Mobile Robots -->
-    <section id="global-localization" class="main special">
-        <header class="major">
-            <h2>Robot Global Localization</h2>
-        </header>
-        <p>Details about the Robot Global Localization project...</p>
-        <!-- Additional content for Robot Global Localization -->
-    </section>
+    <p>To achieve this collaborative lift, a physical connecting truss and a control model were developed and tested on Simulink. 
+        The final truss design weighed only 7.93 grams—light enough to allow for a meaningful payload lift increase—and was robust enough not to bend 
+        visibly under our maximum payload. Moreover, the control scheme was explicitly designed for scalability, allowing for the integration of 
+        additional drones with a focus on enhancing overall lift capacity.</p>
 
-    <!-- Section for Dynamic Balance Board -->
-    <section id="balance-board" class="main special">
-        <header class="major">
-            <h2>Dynamic Balance Board</h2>
-        </header>
-        <p>Details about the Dynamic Balance Board project...</p>
-        <!-- Additional content for Dynamic Balance Board -->
-    </section>
+    <!-- Image floated to the right -->
+    <figure class="image right">
+        <img src="images/stability_flick.jpg" alt="Stability Flick Test" />
+        <figcaption>Stabililty Flick Test</figcaption>
+    </figure>
 
-    <!-- More projects can be added here following the same structure -->
-</div>
+    <p>When tested, the multi-drone system demonstrated a significant 43% increase in lifting capacity compared to the single drone. 
+        This improvement was quantified by the total mass in grams the dual drones could lift compared to the single drone. Furthermore, 
+        the system could adaptively handle and transport loads ranging from 1g to 10g and demonstrated resilience to physical perturbations 
+        during flight. Additionally, the maneuverability of the two drones was comparable to that of the single drone system, 
+        with no significant loss of agility or responsiveness.</p>
 
+    <p>The project's results were conclusive, affirming our hypothesis that a collaborative drone system could meaningfully augment lifting capacity, 
+        be more stable than the single drone, and maneuver similarly to the pre-collaborative system. With these promising results, 
+        future research directions could include experimenting with larger groups of drones, either connected or operating 
+        as an untethered swarm, to lift heavier loads collaboratively. This advancement could potentially shift the focus on 
+        enhancing drone capacity, steering attention away from augmenting individual drones and towards developing more 
+        effective collaboration strategies among multiple drones.</p>
+
+    <p>
+        Click here to see a playlist of our multi-drone system flying and lifting a payload: 
+        <a href="https://www.youtube.com/playlist?list=PLhjMVMo-iKefzUKCguJFhuCKCUdmlcipk" target="_blank">Watch Video</a>
+    </p>    
+</section>
+
+<!-- Section for Balance Board Project -->
+<section id="balance-board" class="main special">
+    <header class="major">
+        <h2>Dynamic Balance Board</h2>
+    </header>
+    <p>This project aimed to design a balance board as a dynamic platform for learning and applying the fundamentals of 
+        mechatronics and control theory. By focusing on the practical aspects of interfacing with motors, encoders, 
+        and sensor systems, the project provided a comprehensive foundation for understanding the operational principles behind more advanced mechatronic systems.</p>
+
+    
+    <!-- Image floated to the left -->
+    <figure class="image left">
+        <img src="images/balance_board.jpg" alt="Balance Board" />
+        <figcaption>Balance Board in Action </figcaption>
+    </figure>
+
+    <p>Working with another teammate, we employed object-oriented programming techniques to achieve our objectives, 
+        specifically designing classes for the system's motors, encoders, and touchpad. Central to our approach was developing a 
+        PID (Proportional-Integral-Derivative) controller tasked with maintaining the rolling ball's equilibrium on the board. 
+        To control the rolling ball, we analyzed the system dynamics and analytically determined the PID controller's K 
+        values using the control theory fundamentals. The project's success hinged on our ability to program for speed, 
+        requiring efficient scheduling and coding practices to manage the ball's movement at high velocities.</p>
+
+    <p>The culmination of our efforts was a fully functional balance board that adeptly balanced a rolling 
+        ball atop a touch sensor within a specified operational range. The effectiveness of our design and control strategy 
+        is exemplified in this video. This success depended on real-time evaluation and control of a highly nonlinear system. 
+        Engaging in this project allowed me to develop my understanding and skills in mechatronics and control systems significantly. 
+        The project emphasized the importance of computational speed in executing theoretical control models and vividly highlighted 
+        the challenges associated with bridging the gap between simulated environments and actual implementation. 
+        Through this hands-on experience, I gained significant confidence in my ability to design and implement complete robotic systems.</p>
+
+        <p>
+            Click here to see a the balancing platform submission which shows the balance board in action: 
+            <a href="https://youtu.be/afBLn_VyAzk" target="_blank">Watch Video</a>
+        </p>  
+
+</section>
+
+<!-- Section for Global Localization Project -->
+<section id="global-localization" class="main special">
+    <header class="major">
+        <h2>Global Localization for Indoor Mobile Robots</h2>
+    </header>
+    <p>This project tackled global localization for a disoriented indoor mobile robot using Particle Filters, also 
+        known as Monte Carlo Localization. Targeted at critical applications such as search and rescue, precision agriculture, 
+        and mapping in hostile environments, the project aimed to accurately determine a robot's location without initial 
+        pose knowledge, employing the principles of Simultaneous Localization and Mapping (SLAM).</p>
+
+    <!-- Image floated to the right -->
+    <div class="image right"><img src="images/path-to-localization-image.jpg" alt="Indoor Localization Using SLAM" /></div>
+
+    <p>A hybrid system was developed to implement the particle filter, integrating C++ for heavy computational tasks 
+        and Python for its flexibility, facilitated by Pybind11—a task I spearheaded. This setup was crucial for 
+        lowering run times and allowing for more particles. My responsibilities included implementing ray tracing 
+        for sensor simulation, parameter tuning, and developing selective particle elimination strategies, 
+        refining the system for efficiency, and tracking accuracy.</p>
+
+    <p>The project culminated in the creation of a scalable and robust global localization system for indoor mobile robots, 
+        demonstrating the Particle Filter-based approach's flexibility. My contributions, particularly in ray tracing, 
+        Pybind11 integration, parameter tuning, and selective particle elimination, alongside assisting my partner with 
+        vectorization, significantly developed and refined my SLAM-related skills.</p>
+
+    <!-- Corrected YouTube link -->
+    <p>
+        Click here to see how the SLAM algorithm is implemented on two different datasets: 
+        <a href="https://www.youtube.com/watch?v=6uewlcvSqe4" target="_blank">Watch Video</a>
+    </p>  
+
+</section>
 
     <!-- Footer -->
     <footer id="footer">
